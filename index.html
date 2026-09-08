@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ralseidev</title>
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --fg: #e8e8e8;
+      --muted: #6b6b6b;
+      --accent: #00ff88;
+      --border: #1a1a1d;
+      --card: #111113;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* Profile */
+    .profile {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
+
+    .name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    /* Links */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .link {
+      display: block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      color: var(--fg);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .link:hover {
+      border-color: var(--accent);
+      background: #161618;
+    }
+
+    .link:active {
+      transform: scale(0.99);
+    }
+
+    details .link::-webkit-details-marker {
+      display: none;
+    }
+
+    details .link::before {
+      content: none;
+    }
+
+    summary {
+      list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .footer a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .footer a:hover {
+      color: var(--fg);
+      border-color: var(--fg);
+    }
+
+    /* Status */
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    .status::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .clock {
+      text-align: center;
+      margin-top: 2rem;
+      font-family: "SF Mono", "JetBrains Mono", "Fira Code", monospace;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile">
+      <img class="avatar" src="a.png" alt="avatar">
+      <h1 class="name">ralseidev</h1>
+      <p class="tagline">noelledev / krisfromdeltarun / krisbutiamanosdev</p>
+      <p class="tagline" style="margin-top:0.5rem;color:var(--accent);">working on deltalator and warkrune</p>
+      <p class="tagline" style="margin-top:0.75rem;font-size:0.85rem;color:var(--muted);">im getting some rest this week or even month, just got back to school and im tired asf</p>
+    </div>
+
+    <div class="links">
+      <a href="https://github.com/KrisButIAmAnOSDev" class="link">→ GitHub</a>
+      <details style="border:none;padding:0;background:transparent;">
+        <summary class="link" style="list-style:none;display:block;cursor:pointer;">→ Discord</summary>
+        <div style="margin-top:0.5rem;padding:0.75rem 1rem;border:1px solid var(--border);border-radius:8px;background:var(--card);">
+          <p style="color:var(--muted);font-size:0.9rem;margin-bottom:0.25rem;">susiefromdeltarune_</p>
+          <p style="color:var(--muted);font-size:0.9rem;">quanchanuwu3</p>
+        </div>
+      </details>
+    </div>
+
+    <div class="faq">
+      <h2 style="font-size:1.1rem;font-weight:600;margin-bottom:1rem;color:var(--fg);">FAQ</h2>
+
+      <details style="margin-bottom:0.75rem;border:1px solid var(--border);border-radius:8px;padding:0.75rem 1rem;background:var(--card);">
+        <summary style="cursor:pointer;font-weight:500;color:var(--fg);user-select:none;">Who are you?</summary>
+        <p style="margin-top:0.5rem;color:var(--muted);font-size:0.9rem;">hi, I'm ralseidev — just call me ralsei. I'm a dev who knows C, C++, Swift, ObjC, NASM, and a lot more. I'd call myself a JB dev. My most notable projects are deltalator (a translation layer to run Linux packages on iOS) and warkrune (my own OS).</p>
+      </details>
+
+      <details style="margin-bottom:0.75rem;border:1px solid var(--border);border-radius:8px;padding:0.75rem 1rem;background:var(--card);">
+        <summary style="cursor:pointer;font-weight:500;color:var(--fg);user-select:none;">Why are your names different on every platform?</summary>
+        <p style="margin-top:0.5rem;color:var(--muted);font-size:0.9rem;">sudo apt install opsec</p>
+      </details>
+
+      <details style="margin-bottom:0.75rem;border:1px solid var(--border);border-radius:8px;padding:0.75rem 1rem;background:var(--card);">
+        <summary style="cursor:pointer;font-weight:500;color:var(--fg);user-select:none;">Do you like FOSS?</summary>
+        <p style="margin-top:0.5rem;color:var(--muted);font-size:0.9rem;">yes, I'll try to make all my projects free and open source, as long as it doesn't hurt me.</p>
+      </details>
+
+      <details style="margin-bottom:0.75rem;border:1px solid var(--border);border-radius:8px;padding:0.75rem 1rem;background:var(--card);">
+        <summary style="cursor:pointer;font-weight:500;color:var(--fg);user-select:none;">Are you gay?</summary>
+        <p style="margin-top:0.5rem;color:var(--muted);font-size:0.9rem;">yes and no — I'm bisexual, also a fluffy femboy :3</p>
+      </details>
+    </div>
+
+    <div class="footer">
+      <p>© 2026 — <a href="#">ralsei</a></p>
+    </div>
+
+    <div class="clock" id="clock"></div>
+
+    <script>
+      function updateClock() {
+        const now = new Date();
+        const options = {
+          timeZone: 'Asia/Ho_Chi_Minh',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false
+        };
+        document.getElementById('clock').textContent =
+          now.toLocaleTimeString('en-US', options) + ' ICT';
+      }
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+  </div>
+</body>
+</html>
