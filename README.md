@@ -1,1 +1,1 @@
-my profile,made with smth like 3% off llm help
+my profile,made with smth like 3% of llm help
